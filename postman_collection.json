@@ -1,0 +1,590 @@
+{
+  "info": {
+    "name": "CBG Website Backend API",
+    "description": "Postman collection for all public API endpoints of the CBG website backend.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Homes",
+      "item": [
+        {
+          "name": "List homes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/homes",
+              "host": ["{{base_url}}"],
+              "path": ["api", "homes"]
+            }
+          }
+        },
+        {
+          "name": "Show home",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/homes/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "homes", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Concerns",
+      "item": [
+        {
+          "name": "List concerns",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/concerns",
+              "host": ["{{base_url}}"],
+              "path": ["api", "concerns"]
+            }
+          }
+        },
+        {
+          "name": "Show concern",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/concerns/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "concerns", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Journeys",
+      "item": [
+        {
+          "name": "List journeys",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/journeys",
+              "host": ["{{base_url}}"],
+              "path": ["api", "journeys"]
+            }
+          }
+        },
+        {
+          "name": "Show journey",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/journeys/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "journeys", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Talk With Experts",
+      "item": [
+        {
+          "name": "List experts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/talk-with-experts",
+              "host": ["{{base_url}}"],
+              "path": ["api", "talk-with-experts"]
+            }
+          }
+        },
+        {
+          "name": "Show expert",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/talk-with-experts/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "talk-with-experts", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Awards",
+      "item": [
+        {
+          "name": "List awards",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/awards",
+              "host": ["{{base_url}}"],
+              "path": ["api", "awards"]
+            }
+          }
+        },
+        {
+          "name": "Show award",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/awards/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "awards", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "FAQs",
+      "item": [
+        {
+          "name": "List FAQs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/faqs",
+              "host": ["{{base_url}}"],
+              "path": ["api", "faqs"]
+            }
+          }
+        },
+        {
+          "name": "Show FAQ",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/faqs/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "faqs", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Terms",
+      "item": [
+        {
+          "name": "List terms",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/terms",
+              "host": ["{{base_url}}"],
+              "path": ["api", "terms"]
+            }
+          }
+        },
+        {
+          "name": "Show term",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/terms/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "terms", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Privacy",
+      "item": [
+        {
+          "name": "List privacy policies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/privacy",
+              "host": ["{{base_url}}"],
+              "path": ["api", "privacy"]
+            }
+          }
+        },
+        {
+          "name": "Show privacy policy",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/privacy/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "privacy", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Drives",
+      "item": [
+        {
+          "name": "List drives",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/drives",
+              "host": ["{{base_url}}"],
+              "path": ["api", "drives"]
+            }
+          }
+        },
+        {
+          "name": "Show drive",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/drives/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "drives", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Missions",
+      "item": [
+        {
+          "name": "List missions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/missions",
+              "host": ["{{base_url}}"],
+              "path": ["api", "missions"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Partners",
+      "item": [
+        {
+          "name": "List partners",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/partners",
+              "host": ["{{base_url}}"],
+              "path": ["api", "partners"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Contact Info",
+      "item": [
+        {
+          "name": "Show contact info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/contact-info",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contact-info"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Contact Messages",
+      "item": [
+        {
+          "name": "Create contact message",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {"raw": {"language": "json"}}
+            },
+            "url": {
+              "raw": "{{base_url}}/api/contact-messages",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contact-messages"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Blogs",
+      "item": [
+        {
+          "name": "List blogs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/blogs",
+              "host": ["{{base_url}}"],
+              "path": ["api", "blogs"]
+            }
+          }
+        },
+        {
+          "name": "Show blog",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/blogs/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "blogs", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "item": [
+        {
+          "name": "List events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/events",
+              "host": ["{{base_url}}"],
+              "path": ["api", "events"]
+            }
+          }
+        },
+        {
+          "name": "Show event",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/events/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "events", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "item": [
+        {
+          "name": "List services",
+          "request": {
+            "description": "Service features: supports filtering by ?search=, ?category= and pagination with ?per_page= query parameters.",
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/services",
+              "host": ["{{base_url}}"],
+              "path": ["api", "services"]
+            }
+          }
+        },
+        {
+          "name": "Show service",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/services/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "services", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Expert Leaders",
+      "item": [
+        {
+          "name": "List expert leaders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/expert-leaders",
+              "host": ["{{base_url}}"],
+              "path": ["api", "expert-leaders"]
+            }
+          }
+        },
+        {
+          "name": "Show expert leader",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/expert-leaders/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "expert-leaders", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Benefits",
+      "item": [
+        {
+          "name": "List benefits",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/benefits",
+              "host": ["{{base_url}}"],
+              "path": ["api", "benefits"]
+            }
+          }
+        },
+        {
+          "name": "Show benefit",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/benefits/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "benefits", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Innovations",
+      "item": [
+        {
+          "name": "List innovations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/innovations",
+              "host": ["{{base_url}}"],
+              "path": ["api", "innovations"]
+            }
+          }
+        },
+        {
+          "name": "Show innovation",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/innovations/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "innovations", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jobs",
+      "item": [
+        {
+          "name": "List jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/jobs",
+              "host": ["{{base_url}}"],
+              "path": ["api", "jobs"]
+            }
+          }
+        },
+        {
+          "name": "Show job",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/jobs/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "jobs", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "About Us",
+      "item": [
+        {
+          "name": "Get About Us",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/about-us",
+              "host": ["{{base_url}}"],
+              "path": ["api", "about-us"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "All Combined",
+      "item": [
+        {
+          "name": "Get all data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/all",
+              "host": ["{{base_url}}"],
+              "path": ["api", "all"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://api.cbg.dahukdigital.com/",
+      "type": "string"
+    }
+  ]
+}

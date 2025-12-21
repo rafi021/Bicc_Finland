@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Preline UI */
+@source "./node_modules/preline/dist/*.js";
+@import "preline/variants.css";
+
+/* Plugins */
+@plugin "@tailwindcss/forms";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  /* Custom Theme Colors */
+  --color-primary-50: #f0f1f9;
+  --color-primary-100: #e1e3f3;
+  --color-primary-200: #c3c7e7;
+  --color-primary-300: #9da4d8;
+  --color-primary-400: #7781c5;
+  --color-primary-500: #5a63b3;
+  --color-primary-600: #464e9a;
+  --color-primary-700: #3a4182;
+  --color-primary-800: #252c6d; 
+  --color-primary-900: #1c2252;
+  --color-primary-950: #0f1330;
+  
+  --color-accent-50: #fef2f2;
+  --color-accent-100: #fee5e5;
+  --color-accent-200: #fdcfcf;
+  --color-accent-300: #fbadac;
+  --color-accent-400: #f77e7d;
+  --color-accent-500: #f04e4c;
+  --color-accent-600: #dd3230;
+  --color-accent-700: #ba2523;
+  --color-accent-800: #9a2120;
+  --color-accent-900: #802221;
+  --color-accent-950: #460e0d;
+}
+
