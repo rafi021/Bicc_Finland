@@ -1,4 +1,4 @@
-# CBG Admin Starter
+# BICC Finland - Mosque Management System
 
 [![Laravel Version](https://img.shields.io/badge/Laravel-10.x-FF2D20?style=flat-square&logo=laravel)](https://laravel.com/)
 [![PHP Version](https://img.shields.io/badge/PHP-8.1-777BB4?style=flat-square&logo=php)](https://www.php.net/)
@@ -6,116 +6,85 @@
 
 ## 📋 Overview
 
-This repository is a lightweight Laravel starter that showcases a fully designed admin panel experience. It keeps the polished CBG admin UI, authentication flow, demo data scaffolding, and basic CRUD utilities so you can quickly pitch ideas or bootstrap a new product backstage. All public REST APIs have been intentionally removed to keep the surface area small and focused.
+BICC Finland (Bangladesh Islamic Cultural Centre) is a comprehensive mosque management system built with Laravel. It features a polished frontend for the community and a robust admin dashboard for mosque administration to manage prayer times, classes, services, donations, and more.
 
-## 🚀 Highlights
+## ✨ Key Features
 
-- ✨ Beautiful admin panel with ready-to-use CRUD screens
-- 🔐 Login/logout powered by Laravel Breeze-style guards
-- 🧱 Database migrations & seeders for demo content
-- 🧰 Utility command (`php artisan make:crudx`) to scaffold additional admin modules
-- 🧪 Opinionated validation, form layouts, and table templates
+### 🕌 Frontend (Community Portal)
+- **Dynamic Prayer Times**: Real-time prayer schedules with "Next Prayer" highlighting.
+- **Service Management**: Detailed view of mosque services (Matrimonial, Funeral, Counseling).
+- **Islamic Classes**: Registration system for adult and children's Quranic studies.
+- **Donation Tracking**: Visual progress bar for fundraising goals and donor recognition.
+- **Image Fallback System**: Robust handling of missing images using professional placeholders.
+- **Event Popups**: Session-aware notifications for upcoming mosque events.
+- **Join Community**: Easy onboarding for new community members.
+- **Contact System**: Direct messaging to mosque administration.
 
-## 🛠️ Prerequisites
-
-- PHP 8.1 or higher
-- Composer
-- MySQL 5.7+ or MariaDB 10.3+
-- Node.js & NPM (for frontend assets)
+### 🔐 Admin Dashboard
+- **Branding & Settings**: Manage site logos, favicons, hero sections, and mosque metadata.
+- **Prayer Time Management**: CSV import for monthly schedules and manual override for daily times.
+- **Service Requests**: Manage incoming requests for mosque services.
+- **Class Registrations**: Track and manage students for Islamic classes.
+- **Gallery Management**: Organize mosque photos by categories.
+- **Event Management**: Create and toggle active status for homepage popups.
+- **Donor Management**: Track offline and online donations.
+- **Contact Messages**: Centralized inbox for all community inquiries.
 
 ## 🚀 Getting Started
 
+### Prerequisites
+- PHP 8.1 or higher
+- Composer
+- MySQL 5.7+ or MariaDB 10.3+
+- Node.js & NPM
+
+### Installation
+
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/cbg-website-backend.git
-   cd cbg-website-backend
+   git clone https://github.com/Sydulamin/Bicc_Finland.git
+   cd Bicc_Finland
    ```
 
-2. **Install PHP dependencies**
+2. **Install Dependencies**
    ```bash
    composer install
-   ```
-
-3. **Install NPM dependencies**
-   ```bash
    npm install
-   npm run dev
    ```
 
-4. **Environment setup**
+3. **Environment Setup**
    ```bash
    cp .env.example .env
    php artisan key:generate
    ```
 
-5. **Configure your .env file**
-   Update the database connection details and other environment variables in the `.env` file.
+4. **Database Configuration**
+   - Create a database and update `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` in your `.env` file.
 
-6. **Run migrations and seeders**
+5. **Migrations & Seeding**
+   Initialize the database with professional dummy data:
    ```bash
    php artisan migrate --seed
    ```
 
-7. **Start the development server**
+6. **Serve the Application**
    ```bash
    php artisan serve
    ```
 
-## 🔧 Configuration
+## 🛠️ Commands & Utilities
 
-### Environment Variables
+- **Seed Dummy Data**: `php artisan db:seed` (Populates settings, classes, services, and mosque content).
+- **Scaffold Admin Modules**: `php artisan make:crudx` (Utility for adding new management sections).
+- **Asset Compilation**: `npm run dev` or `npm run build`.
 
-Create a `.env` file and configure the following variables:
-
-```env
-APP_NAME=CBG_Backend
-APP_ENV=local
-APP_DEBUG=true
-APP_URL=http://localhost:8000
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=cbg_database
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-8. **Log into the admin**
-   - Visit `http://127.0.0.1:8000/admin/login`
-   - Use the seeded admin credentials (see `database/seeders/AdminUserSeeder.php`)
-
-## 🧪 Testing
-
-Run the test suite with:
-
-```bash
-php artisan test
-```
-
-## 🧑‍💻 Development
-
-### Code Style
-
-This project follows PSR-12 coding standards. To check and fix code style:
-
-```bash
-composer check-style
-composer fix-style
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## 🤝 Admin Credentials
+After seeding, you can log in at `/admin/login`:
+- **Default Email**: `admin@biccfinland.org` (or check `AdminUserSeeder.php`)
+- **Default Password**: Consult development team or Seeder file.
 
 ## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## 📧 Contact
-
-For any questions or feedback, please contact the development team at [your-email@example.com](mailto:your-email@example.com).
+For technical support or inquiries, please contact the development team at [info@biccfinland.org](mailto:info@biccfinland.org).
