@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/masjid/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!--------headers-->
+    <header class="max-w-[1320px] sticky z-50 top-2 px-5 xl:px-0 mx-auto bg-white z-50 overflow-hidden">
+      <div
+        class="flex justify-between  bg-white items-center py-4 px-5 rounded-[12px] border border-[var(--grey-300)]"
+      >
+        <img src="/masjid/images/logo.png" alt="logo" class="w-[80px] sm:w-auto" />
+
+        <div class="lg:flex gap-x-1 hidden">
+          <a href="/masjid/index.html">
+            <div
+              class="px-3 py-3 rounded-[10px] cursor-pointer hover:bg-green-600 hover:text-white text-[var(--grey-500)] text-base font-medium uppercase"
+            >
+              HOME
+            </div>
+          </a>
+
+          <a href="/masjid/service.html">
+            <div
+              class="px-3 py-3 cursor-pointer hover:bg-green-600 hover:text-white rounded-[10px] text-[var(--grey-600)] text-base font-medium uppercase"
+            >
+              SERVICES
+            </div>
+          </a>
+          <a href="/masjid/gallary.html">
+            <div
+              class="px-3 py-3 cursor-pointer bg-green-600 text-white rounded-[10px] text-base font-medium uppercase"
+            >
+              GALLARY
+            </div>
+          </a>
+        </div>
+        <!-----bismillah-->
+        <img
+          src="/masjid/images/arbilogo.png"
+          alt="logo"
+          class="block max-[300px]:hidden max-[350px]:w-[100px] w-[150px] sm:w-auto lg:hidden"
+        />
+        <div
+          onclick="showDonateModal()"
+          class="lg:flex items-center gap-x-[10px] py-3 px-3 rounded-[10px] bg-[var(--primary-1)] hover:bg-[var(--primary-2)] cursor-pointer hidden"
+        >
+          <span class="text-white capitalize font-medium">donate us</span>
+          <i class="ti ti-heart-handshake text-white text-2xl"></i>
+        </div>
+        <!------humbergermenu-->
+        <div onclick="showNavDrawer()" class="block lg:hidden">
+          <i class="ti ti-menu-deep text-2xl"></i>
+        </div>
+      </div>
+    </header>
+    <section>
+      <!-----hero section-->
+      <section
+        class="max-w-[1320px] mt-2 sm:mt-0 mb-6 md:mb-[60px] px-5 xl:px-0 mx-auto overflow-hidden"
+      >
+        <div class="relative mt-2 sm:mt-5">
+          <div class="w-full h-auto rounded-[20px]">
+            <img
+              src="/masjid/images/gallaryhero.png"
+              alt="image"
+              class="w-full object-cover rounded-[10px] sm:rounded-[20px]"
+            />
+          </div>
+          <div
+            class="flex flex-col text-white absolute bottom-3 lg:bottom-16 left-6"
+          >
+            <span class="text-xl sm:text-[32px] font-medium"
+              >Our Gallaries</span
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        class="max-w-[1320px] mb-6 md:mb-[130px] px-5 xl:px-0 mx-auto relative overflow-hidden"
+      >
+        <h3
+          class="capitalize text-xl md:text-[32px] text-center font-medium text-[var(--primary-2)]"
+        >
+          Our Gallery
+        </h3>
+        <div class="grid grid-cols-12 mt-10 md:gap-x-12">
+          <div class="col-span-12 md:col-span-4 hidden md:block">
+            <div
+              class="w-full py-6 px-6 bg-[var(--grey-50)] border border-[var(--grey-200)] rounded-[20px]"
+            >
+              <h3
+                class="capitalize text-lg md:text-[28px] font-medium text-[var(--primary-2)]"
+              >
+                Images
+              </h3>
+              <div class="flex flex-col">
+                <div
+                  class="flex justify-between items-center w-full cursor-pointer group pb-2"
+                >
+                  <span
+                    class="text-sm sm:text-lg capitalize text-[var(--grey-500)] group-hover:text-[var(--primary-1)]"
+                    >Islamic Event</span
+                  >
+                  <i
+                    class="ti ti-hand-finger rotate-90 text-[var(--grey-500)] group-hover:text-[var(--primary-1)] text-sm sm:text-2xl"
+                  ></i>
+                </div>
+                <div
+                  class="flex justify-between items-center w-full cursor-pointer group pb-2"
+                >
+                  <span
+                    class="text-sm sm:text-lg capitalize text-[var(--grey-500)] group-hover:text-[var(--primary-1)]"
+                    >Islamic Event</span
+                  >
+                  <i
+                    class="ti ti-hand-finger rotate-90 text-[var(--grey-500)] group-hover:text-[var(--primary-1)] text-sm sm:text-2xl"
+                  ></i>
+                </div>
+                <div
+                  class="flex justify-between items-center w-full cursor-pointer group pb-2"
+                >
+                  <span
+                    class="text-sm sm:text-lg capitalize text-[var(--grey-500)] group-hover:text-[var(--primary-1)]"
+                    >Islamic Event</span
+                  >
+                  <i
+                    class="ti ti-hand-finger rotate-90 text-[var(--grey-500)] group-hover:text-[var(--primary-1)] text-sm sm:text-2xl"
+                  ></i>
+                </div>
+                <div
+                  class="flex justify-between items-center w-full cursor-pointer group pb-2"
+                >
+                  <span
+                    class="text-sm sm:text-lg capitalize text-[var(--grey-500)] group-hover:text-[var(--primary-1)]"
+                    >Islamic Event</span
+                  >
+                  <i
+                    class="ti ti-hand-finger rotate-90 text-[var(--grey-500)] group-hover:text-[var(--primary-1)] text-sm sm:text-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div class="flex flex-col items-start w-full">
+                <div
+                  class="w-full max-[360px]:h-[200px] h-[291px] lg:h-[200px] xl:h-[291px] rounded-[16px]"
+                >
+                  <img
+                    src="/masjid/images/gallery.png"
+                    alt="image"
+                    class="w-full h-full object-cover rounded-[16px]"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-sm sm:text-base text-[var(--grey-500)]"
+                    >Tafsir event in baitul karim masque</span
+                  >
+                  <span class="text-xs text-[var(--primary-2)]">
+                    Saturdays 10:00 AM - 12:00 PM</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-col items-start w-full">
+                <div
+                  class="w-full max-[360px]:h-[200px] h-[291px] lg:h-[200px] xl:h-[291px] rounded-[16px]"
+                >
+                  <img
+                    src="/masjid/images/gallery.png"
+                    alt="image"
+                    class="w-full h-full object-cover rounded-[16px]"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-sm sm:text-base text-[var(--grey-500)]"
+                    >Tafsir event in baitul karim masque</span
+                  >
+                  <span class="text-xs text-[var(--primary-2)]">
+                    Saturdays 10:00 AM - 12:00 PM</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!---pagination-->
+             <div class="flex gap-x-1 justify-end items-center mt-4">
+             <i class="ti ti-chevron-left text-gray-600 text-md cursor-pointer"></i>
+              <div class="flex gap-x-1">
+            <div class="flex w-8 h-8 flex justify-center items-center hover:text-white hover:bg-green-600 cursor-pointer rounded bg-gray-200 text-gray-500 text-sm font-medium">
+             <span>1</span>
+             </div>
+                <div class="flex w-8 h-8 flex justify-center items-center hover:text-white hover:bg-green-600 cursor-pointer rounded bg-gray-200 text-gray-500 text-sm font-medium">
+             <span>1</span>
+             </div>
+                <div class="flex w-8 h-8 flex justify-center items-center hover:text-white hover:bg-green-600 cursor-pointer rounded bg-gray-200 text-gray-500 text-sm font-medium">
+             <span>1</span>
+             </div>
+                <div class="flex w-8 h-8 flex justify-center items-center hover:text-white hover:bg-green-600 cursor-pointer rounded bg-gray-200 text-gray-500 text-sm font-medium">
+             <span>1</span>
+             </div>
+              </div>
+              <i class="ti ti-chevron-right text-gray-600 text-md cursor-pointer"></i>
+             </div>
+          </div>
+        </div>
+        <i
+          onclick="showGallaryDrawer()"
+          class="ti ti-menu-2 text-2xl block sm:hidden text-[var(--grey-500)] absolute top-5 left-5"
+        ></i>
+      </section>
+      <!-----draweroverlay-->
+      <div
+        id="gallery-drawer"
+        onclick="closeGallaryDrawer()"
+        class="w-full h-full fixed top-0 bg-black/50 z-50 hidden"
+      ></div>
+      <div
+        id="gallary-menubar"
+        class="w-3/4 px-5 pt-5 h-full fixed top-0 bg-white z-50 -translate-x-[100%] transition-all duration-500"
+      >
+        <h3
+          class="capitalize text-lg md:text-[28px] font-medium text-[var(--primary-2)]"
+        >
+          Images
+        </h3>
+        <div class="flex flex-col">
+          <div
+            onclick="closeGallaryDrawer()"
+            class="flex justify-between items-center w-full cursor-pointer group pb-2"
+          >
+            <span
+              class="text-sm sm:text-lg capitalize text-[var(--grey-500)] group-hover:text-[var(--primary-1)]"
+              >Islamic Event</span
+            >
+            <i
+              class="ti ti-hand-finger rotate-90 text-[var(--grey-500)] group-hover:text-[var(--primary-1)] text-sm sm:text-2xl"
+            ></i>
+          </div>
+          <div
+            onclick="closeGallaryDrawer()"
+            class="flex justify-between items-center w-full cursor-pointer group pb-2"
+          >
+            <span
+              class="text-sm sm:text-lg capitalize text-[var(--grey-500)] group-hover:text-[var(--primary-1)]"
+              >Islamic Event</span
+            >
+            <i
+              class="ti ti-hand-finger rotate-90 text-[var(--grey-500)] group-hover:text-[var(--primary-1)] text-sm sm:text-2xl"
+            ></i>
+          </div>
+          <div
+            onclick="closeGallaryDrawer()"
+            class="flex justify-between items-center w-full cursor-pointer group pb-2"
+          >
+            <span
+              class="text-sm sm:text-lg capitalize text-[var(--grey-500)] group-hover:text-[var(--primary-1)]"
+              >Islamic Event</span
+            >
+            <i
+              class="ti ti-hand-finger rotate-90 text-[var(--grey-500)] group-hover:text-[var(--primary-1)] text-sm sm:text-2xl"
+            ></i>
+          </div>
+          <div
+            onclick="closeGallaryDrawer()"
+            class="flex justify-between items-center w-full cursor-pointer group pb-2"
+          >
+            <span
+              class="text-sm sm:text-lg capitalize text-[var(--grey-500)] group-hover:text-[var(--primary-1)]"
+              >Islamic Event</span
+            >
+            <i
+              class="ti ti-hand-finger rotate-90 text-[var(--grey-500)] group-hover:text-[var(--primary-1)] text-sm sm:text-2xl"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <!---join our community-->
+      <section
+        id="community"
+        class="bg-class-container w-full py-7 lg:py-[60px]"
+      >
+        <h3
+          class="capitalize text-xl md:text-[32px] text-center font-medium text-[var(--primary-2)]"
+        >
+          join our community
+        </h3>
+        <div class="max-w-[1320px] px-5 xl:px-0 mx-auto w-full mt-10">
+          <form
+            action=""
+            class="max-w-[760px] mx-auto px-6 py-6 bg-white rounded-[10px] space-y-4"
+          >
+            <div class="flex flex-col gap-y-1">
+              <label
+                for="first-name"
+                class="text-[var(--grey-500)] text-xs sm:text-base font-medium capitalize"
+                >Name <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value=""
+                placeholder="Enter Your Name"
+                required
+                class="py-2 sm:py-3 px-4 border border-[var(--grey-300)] outline-none focus:outline-none focus:border-amber-600 text-xs sm:text-base text-[var(--grey-600)] sm:rounded-[16px] rounded-lg placeholder:text-[var(--grey-400)]"
+              />
+            </div>
+            <div class="flex flex-col gap-y-1">
+              <label
+                for="email"
+                class="text-[var(--grey-500)] text-xs sm:text-base font-medium capitalize"
+                >Email <span class="text-red-500">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value=""
+                placeholder="Enter Your Email"
+                required
+                class="py-2 sm:py-3 px-4 text-xs sm:text-base border border-[var(--grey-300)] outline-none focus:outline-none focus:border-amber-600 text-[var(--grey-600)] rounded-lg sm:rounded-[16px] placeholder:text-[var(--grey-400)]"
+              />
+            </div>
+            <div class="flex flex-col gap-y-1">
+              <label
+                for="phone-number"
+                class="text-[var(--grey-500)] text-xs sm:text-base font-medium capitalize"
+                >phone number <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="phone-number"
+                name="phoneNumber"
+                value=""
+                placeholder="Enter Your PhoneNumber"
+                required
+                class="py-2 sm:py-3 px-4 text-xs sm:text-base border border-[var(--grey-300)] outline-none focus:outline-none focus:border-amber-600 text-[var(--grey-600)] rounded-lg sm:rounded-[16px] placeholder:text-[var(--grey-400)]"
+              />
+            </div>
+            <button
+              class="text-center bg-[var(--primary-1)] w-full py-2 sm:py-3 text-white text-xs sm:text-base font-medium flex justify-center items-center cursor-pointer gap-x-1 hover:bg-[var(--primary-2)] text-center rounded-lg sm:rounded-[16px]"
+              type="submit"
+            >
+              <span>Submit</span>
+              <i class="ti ti-arrow-right text-white text-xl"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+    </section>
+        <!------footer-->
+    <footer class="w-full bg-[var(--primary-2)] text-white">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 items-center  sm:items-start text-center sm:text-start max-w-[1320px] px-5 xl:px-0 mx-auto py-10"
+      >
+        <div class="flex flex-col items-center sm:items-start text-center sm:text-start max-w-[356px]">
+          <span class="uppercase text-lg sm:text-2xl font-bold"
+            >BICC FINLAND</span
+          >
+          <span class="text-xs sm:text-base"
+            >Bangladesh Islamic Cultural Centre - Building a stronger Muslim
+            community through faith, education, and unity.</span
+          >
+          <div class="flex gap-x-1 items-center mt-4">
+            <i class="ti ti-phone text-white text-md md:text-lg"></i>
+            <span class="text-xs sm:text-base"> (555) 123-4567</span>
+          </div>
+          <div class="flex gap-x-1 items-center mt-1">
+            <i class="ti ti-home text-white text-md md:text-lg"></i>
+            <span class="text-xs sm:text-base"
+              >Malminkaari 9 A (3rd floor)</span
+            >
+          </div>
+          <div class="flex gap-x-1 items-center mt-1">
+            <i class="ti ti-mail text-white text-md md:text-lg"></i>
+            <span class="text-xs sm:text-base"> info@biccfinland.org</span>
+          </div>
+        </div>
+        <div class="flex flex-col capitalize gap-y-1 md:pl-30 lg:pl-30">
+          <span class="text-lg sm:text-2xl font-bold">quik links</span>
+          <div class="flex flex-col gap-y-1 text-xs sm:text-base">
+            <span><a href="/masjid/about.html">About Us</a></span>
+            <span><a href="/masjid/contact.html">Contact Us</a></span>
+            <span class="cursor-pointer" onclick="scrolltoPrayer()"
+              >prayer time</span
+            >
+            <span class="cursor-pointer" onclick="scrollToService()"
+              >Services</span
+            >
+            <span class="cursor-pointer" onclick="scrollToClass()"
+              >Classses</span
+            >
+            <span class="cursor-pointer" onclick="scrollToGallery()"
+              >Gallary</span
+            >
+            <span class="cursor-pointer" onclick="scrollToCommunity()"
+              >Community</span
+            >
+          </div>
+        </div>
+        <div class="flex flex-col items-center sm:items-start text-center sm:text-start">
+          <span class="text-lg sm:text-2xl font-bold">Support Our Mission</span>
+          <span class="text-xs sm:text-base  max-w-[294px]"
+            >Help us build our permanent mosque and serve the community
+            better.</span
+          >
+          <div class="flex justify-start mt-6">
+            <div
+              onclick="showDonateModal()"
+              class="lg:flex items-center gap-x-[10px] py-3 px-3 rounded-[10px] bg-[var(--primary-1)] hover:bg-green-900 cursor-pointer hidden"
+            >
+              <span class="text-white capitalize font-medium">donate us</span>
+              <i class="ti ti-heart-handshake text-white text-lg"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-------responsivenavbardrawer-->
+    <!---draweroverlay-->
+    <div
+      id="drawer-overlay"
+      onclick="closeNavDrawer()"
+      class="w-full bg-black/50 h-full z-50 fixed top-0 hidden transition-all duration-500"
+    ></div>
+    <div
+      id="drawer-menu"
+      class="w-3/4 bg-white h-full z-50 fixed top-0 right-0 overflow-hidden translate-x-[100%] transition-all duration-500 px-4 pt-9"
+    >
+      <div class="flex flex-col gap-y-1">
+        <a href="/masjid/index.html">
+          <div
+            class="px-3 py-2 rounded-[10px] cursor-pointer hover:bg-green-600 hover:text-white text-[var(--grey-600)] text-xs font-medium uppercase"
+          >
+            HOME
+          </div>
+        </a>
+        <a href="/masjid/service.html">
+          <div
+            class="px-3 py-2 rounded-[10px] cursor-pointer hover:bg-green-600 hover:text-white text-[var(--grey-600)] text-xs font-medium uppercase"
+          >
+            Service
+          </div>
+        </a>
+        <a href="/masjid/gallary.html">
+          <div
+            class="px-3 py-2 rounded-[10px] cursor-pointer bg-green-600 text-white text-xs font-medium uppercase"
+          >
+            Gallery
+          </div>
+        </a>
+      </div>
+      <div
+        onclick="showDonateModal()"
+        class="flex justify-center items-center mt-4 gap-x-[10px] py-2 rounded-[10px] bg-[var(--primary-1)] hover:bg-[var(--primary-2)] cursor-pointer"
+      >
+        <span class="text-white text-xs capitalize font-medium">donate us</span>
+        <i class="ti ti-heart-handshake text-white text-lg"></i>
+      </div>
+    </div>
+       <!------donationmodal-->
+    <div
+      id="donate-modal"
+      class="w-full h-full z-50 hidden px-5 xl:px-0 fixed top-0 bg-black/50 flex justify-center items-center"
+    >
+      <div
+        class="w-[734px] px-6 py-6 mx-auto bg-[var(--grey-50)] border border-[var(--grey-200)] rounded-[10px] relative"
+      >
+        <i
+          onclick="closeDonateModal()"
+          class="ti ti-x text-2xl text-[var(--grey-500)] absolute top-2 right-4 cursor-pointer"
+        ></i>
+        <div class="flex flex-col gap-y-4">
+          <div
+            class="flex max-[360px]:flex-col gap-y-1 flex-row gap-x-5 items-center"
+          >
+            <div
+              id="active-qr-code"
+              onclick="showQrCode()"
+              class="px-3 py-3 rounded-[10px] cursor-pointer bg-green-600 text-white hover:bg-green-600 hover:text-white text-xs sm:text-base text-center font-medium uppercase"
+            >
+              Qr code process
+            </div>
+            <div
+              id="active-mobile-banking"
+              onclick="showMoblileBanking()"
+              class="px-3 py-3 rounded-[10px] cursor-pointer hover:bg-green-600 hover:text-white text-xs sm:text-base text-center text-[var(--grey-500)] font-medium uppercase"
+            >
+              MOBILE BANKING
+            </div>
+          </div>
+          <div id="qr-code-container" class="flex flex-col items-center block">
+            <h3
+              class="text-xl sm:text-[32px] text-center text-gray-600 font-semibold"
+            >
+              Payment Here
+            </h3>
+           <!-----qrcode-->
+           <div class="w-40 h-40">
+              <img src="/masjid/images/qr.png" alt="image" class="w-full h-full object-cover"/>
+           </div>
+          </div>
+          <div
+            id="mobile-banking-container"
+            class="hidden flex flex-col items-center"
+          >
+            <h3
+              class="text-xl sm:text-[32px] text-gray-600  text-center font-semibold"
+            >
+              Payment Here via Mobile Banking
+            </h3>
+              <!-----qrcode-->
+           <div class="w-40 h-40">
+              <img src="/masjid/images/qr.png" alt="image" class="w-full h-full object-cover"/>
+           </div>
+            <!---shoing donor name-->
+            <div class="flex flex-col w-full">
+              <p
+                class="capitalize text-sm sm:text-base text-[var(--grey-500)] text-center font-medium"
+              >
+                Would You like to reveal your name?
+              </p>
+              <div class="flex items-center justify-center gap-x-2 w-full">
+                <span
+                  id="yes"
+                  onclick="showInputName()"
+                  class="text-base font-medium cursor-pointer hover:text-green-600"
+                  >Yes</span
+                >
+                <span
+                  id="no"
+                  onclick="closeInputName()"
+                  class="text-base font-medium cursor-pointer text-green-600 hover:text-green-600"
+                  >No</span
+                >
+              </div>
+              <div id="input" class="pt-3 hidden w-full">
+                <form action="" class="w-full space-y-4">
+                     <div class="flex flex-col gap-y-1 w-full">
+                    <label
+                      for="name"
+                      class="text-[var(--grey-500)] text-xs sm:text-base font-medium capitalize"
+                    >
+                      Name <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value=""
+                      placeholder="Enter Your Name"
+                      required
+                      class="py-2 sm:py-3 px-4 border border-[var(--grey-300)] outline-none focus:outline-none focus:border-amber-600 text-xs sm:text-base text-[var(--grey-600)] sm:rounded-[16px] rounded-lg placeholder:text-[var(--grey-400)]"
+                    />
+                  </div>
+                     <div class="flex flex-col gap-y-1 w-full">
+                    <label
+                      for="email"
+                      class="text-[var(--grey-500)] text-xs sm:text-base font-medium capitalize"
+                    >
+                      Email <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      type="email"
+                      id="name"
+                      name="email"
+                      value=""
+                      placeholder="Enter Your Name"
+                      required
+                      class="py-2 sm:py-3 px-4 border border-[var(--grey-300)] outline-none focus:outline-none focus:border-amber-600 text-xs sm:text-base text-[var(--grey-600)] sm:rounded-[16px] rounded-lg placeholder:text-[var(--grey-400)]"
+                    />
+                  </div>
+                   <div class="flex flex-col gap-y-1 w-full">
+                    <label
+                      for="number"
+                      class="text-[var(--grey-500)] text-xs sm:text-base font-medium capitalize"
+                    >
+                      PhoneNumber <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="number"
+                      name="number"
+                      value=""
+                      placeholder="Enter Your PhoneNumber"
+                      required
+                      class="py-2 sm:py-3 px-4 border border-[var(--grey-300)] outline-none focus:outline-none focus:border-amber-600 text-xs sm:text-base text-[var(--grey-600)] sm:rounded-[16px] rounded-lg placeholder:text-[var(--grey-400)]"
+                    />
+                  </div>
+                  <button
+                    class="text-center bg-[var(--primary-1)] w-full py-2 sm:py-3 text-white text-xs sm:text-base font-medium flex justify-center items-center cursor-pointer gap-x-1 hover:bg-[var(--primary-2)] text-center rounded-lg sm:rounded-[16px]"
+                    type="submit"
+                  >
+                    <span>Submit</span>
+                    <i class="ti ti-arrow-right text-white text-xl"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------donateButton-->
+     <div class="flex flex-col items-end gap-y-2 fixed right-5 bottom-12">
+     <a href="#">
+       <img
+        src="/masjid/images/whatsapp.png"
+        alt="whatsapp"
+        class="max-[360px]:w-[30px] w-[40px] sm:w-auto cursor-pointer"
+      />
+     </a>
+    <a href="#">
+           <img
+        src="/masjid/images/x.png"
+        alt="x"
+        class="cursor-pointer max-[360px]:w-[30px] w-[40px] sm:w-auto cursor-pointer"
+      />
+    </a>
+    <a href="#">
+            <img
+        src="/masjid/images/facebook.png"
+        alt="facebook"
+        class="cursor-pointer max-[360px]:w-[30px] w-[40px] sm:w-auto cursor-pointer"
+      />
+    </a>
+      <div
+        onclick="showDonateModal()"
+        class="flex justify-center items-center gap-x-[10px] py-2 px-3 rounded-[10px] bg-[var(--primary-1)] hover:bg-[var(--primary-2)] cursor-pointer"
+      >
+        <span class="text-white text-xs sm:text-base capitalize font-medium"
+          >donate us</span
+        >
+        <i class="ti ti-heart-handshake text-white text-lg"></i>
+      </div>
+    </div>
+    <script src="/masjid/script.js"></script>
+  </body>
+</html>

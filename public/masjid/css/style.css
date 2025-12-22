@@ -1,0 +1,23 @@
+:root{
+    --primary-1:#008236;
+    --primary-2:#00A63E;
+    --grey-50:#F8FAFC;
+    --grey-100:#F3F4F6;
+    --grey-200:#E5E7EB;
+    --grey-300:#D1D5DC;
+    --grey-400:#99A1AF;
+    --grey-500:#6A7282;
+    --grey-600:#4A5565;
+    --grey-800:#1E2939;
+    --grey-900:#101828;
+    --support-color:#F9A61A;
+}
+
+.bg-class-container{
+    background-image: url('/images/classcontainer.png');
+    background-size: cover;
+}
+
+.drawer-shadow{
+    box-shadow: 10px 100px 10px #000;
+}
