@@ -55,7 +55,6 @@ BICC Finland (Bangladesh Islamic Cultural Centre) is a comprehensive mosque mana
 3. **Environment Setup**
    ```bash
    cp .env.example .env
-   php artisan key:generate
    ```
 
 4. **Database Configuration**
@@ -87,4 +86,4 @@ After seeding, you can log in at `/admin/login`:
 This project is licensed under the MIT License.
 
 ## 📧 Contact
-For technical support or inquiries, please contact the development team at [info@biccfinland.org](mailto:info@biccfinland.org).
+For technical support or inquiries, please contact the development team at [sydulamin6@gmail.com](mailto:sydulamin6@gmail.com).
