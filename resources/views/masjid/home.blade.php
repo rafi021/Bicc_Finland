@@ -329,7 +329,7 @@
         </div>
     </section>
     <!---join our community-->
-    <section id="community" class="bg-class-container w-full py-7 lg:py-[60px]">
+    <section id="community" class="bg-green-100 w-full py-7 lg:py-[60px]">
         <h3 class="capitalize text-xl md:text-[32px] text-center font-medium text-[var(--primary-2)]">
             join our community
         </h3>

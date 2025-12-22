@@ -55,7 +55,7 @@
             border-radius: 2rem;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
             width: 100%;
-            max-width: 440px;
+            max-width: 480px;
             border: 1px solid rgba(226, 232, 240, 0.8);
             animation: cardEntrance 0.8s ease-out;
         }
@@ -94,7 +94,7 @@
         <!-- Brand -->
         <div class="text-center mb-14">
             <h1 class="text-2xl font-bold text-slate-900 tracking-tight">Admin Portal</h1>
-            <p class="text-slate-500 text-sm mt-1">Manage your mosque effortlessly</p>
+            <p class="text-slate-500 text-sm mt-1">Manage your CMS effortlessly</p>
         </div>
         <div class="h-4"></div>
 
@@ -118,11 +118,11 @@
                     Email Address
                 </label>
                 <div class="relative group">
-                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-[#1c2252] transition-colors">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary-800 transition-colors">
                         <i class="text-xl"></i>
                     </div>
                     <input id="email" name="email" type="email" autocomplete="email" required value="{{ old('email') }}"
-                        class="input-field block w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-0 focus:border-[#1c2252] focus:bg-white text-sm font-medium text-slate-900"
+                        class="input-field block w-full pr-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-0 focus:border-primary-800 focus:bg-white text-sm font-medium text-slate-900"
                         placeholder="admin@mosque.com">
                 </div>
             </div>
@@ -132,23 +132,23 @@
                     <label for="password" class="block text-xs font-semibold text-slate-500 uppercase tracking-widest">
                         Password
                     </label>
-                    <a href="#" class="text-xs font-bold text-[#f04e4c] hover:underline">Forgot?</a>
+                    {{-- <a href="#" class="text-xs font-bold text-accent-500 hover:underline">Forgot?</a> --}}
                 </div>
                 <div class="relative group">
-                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-[#1c2252] transition-colors">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary-800 transition-colors">
                         <i class="text-xl"></i>
                     </div>
                     <input id="password" name="password" type="password" required
-                        class="input-field block w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-0 focus:border-[#1c2252] focus:bg-white text-sm font-medium text-slate-900"
+                        class="input-field block w-full pr-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-0 focus:border-primary-800 focus:bg-white text-sm font-medium text-slate-900"
                         placeholder="••••••••••••">
                 </div>
             </div>
 
             <div class="flex items-center ml-1">
                 <input id="remember" name="remember" type="checkbox"
-                    class="h-4 w-4 text-[#1c2252] border-slate-300 rounded focus:ring-0 cursor-pointer">
+                    class="h-4 w-4 text-primary-800 border-slate-300 rounded focus:ring-0 cursor-pointer">
                 <label for="remember" class="ml-2 block text-sm text-slate-500 font-medium cursor-pointer">
-                    Remember for 30 days
+                    Remember me
                 </label>
             </div>
 
