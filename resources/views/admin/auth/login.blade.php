@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login - CBG Mosque</title>
+    <title>Admin Login - BICC FINLAND</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +93,7 @@
     <div class="login-box">
         <!-- Brand -->
         <div class="text-center mb-14">
-            <h1 class="text-2xl font-bold text-slate-900 tracking-tight">Admin Portal</h1>
+            <h1 class="text-2xl font-bold text-slate-900 tracking-tight">BICC FINLAND</h1>
             <p class="text-slate-500 text-sm mt-1">Manage your CMS effortlessly</p>
         </div>
         <div class="h-4"></div>
@@ -118,12 +118,9 @@
                     Email Address
                 </label>
                 <div class="relative group">
-                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary-800 transition-colors">
-                        <i class="text-xl"></i>
-                    </div>
                     <input id="email" name="email" type="email" autocomplete="email" required value="{{ old('email') }}"
                         class="input-field block w-full pr-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-0 focus:border-primary-800 focus:bg-white text-sm font-medium text-slate-900"
-                        placeholder="admin@mosque.com">
+                        placeholder="admin@biccfinland.com">
                 </div>
             </div>
 
@@ -135,9 +132,6 @@
                     {{-- <a href="#" class="text-xs font-bold text-accent-500 hover:underline">Forgot?</a> --}}
                 </div>
                 <div class="relative group">
-                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary-800 transition-colors">
-                        <i class="text-xl"></i>
-                    </div>
                     <input id="password" name="password" type="password" required
                         class="input-field block w-full pr-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-0 focus:border-primary-800 focus:bg-white text-sm font-medium text-slate-900"
                         placeholder="••••••••••••">
