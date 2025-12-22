@@ -114,12 +114,12 @@
                         <p class="text-md md:text-2xl text-white font-medium capitalize">
                             {{ @$setting->jummah_time ?? '1:00 PM' }}
                         </p>
-                        @php
+                        <!-- @php
                             $isFriday = now()->isFriday();
                             $showLive = $isFriday && now()->hour >= 11 && now()->hour <= 15;
-                        @endphp
+                        @endphp -->
                         
-                        @if(@$setting->jummah_live_link && $showLive)
+                        @if(@$setting->jummah_live_link)
                         <div class="relative">
                             <span class="absolute -top-2 -right-2 flex h-3 w-3">
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
