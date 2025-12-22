@@ -71,13 +71,16 @@ class MosqueController extends Controller
         // Fetch gallery images
         $galleryImages = Gallery::with('category')->latest()->take(6)->get();
 
+        // Fetch services (limit to 6 for homepage)
+        $services = Service::latest()->take(6)->get();
+
         // Fetch active event popup
         $eventPopup = EventPopup::where('is_active', true)
             ->where('event_datetime', '>', now())
             ->latest()
             ->first();
 
-        return view('masjid.home', compact('setting', 'donors', 'prayerTimes', 'classes', 'galleryImages', 'eventPopup'));
+        return view('masjid.home', compact('setting', 'donors', 'prayerTimes', 'classes', 'galleryImages', 'services', 'eventPopup'));
     }
 
     public function storeRegistration(ClassRegistrationRequest $request)

@@ -233,54 +233,27 @@
             our services
         </h3>
         <div class="grid grid-cols-1 mt-10 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+            @forelse($services as $service)
             <div class="flex flex-col justify-center items-center text-center">
                 <div class="flex justify-center items-center w-[112px] h-[112px] rounded-full bg-[var(--grey-200)]">
-                    <i class="ti ti-book-upload text-[var(--primary-1)] text-[54px]"></i>
+                    <i class="ti {{ $service->icon ?? 'ti-help' }} text-[var(--primary-1)] text-[54px]"></i>
                 </div>
-                <span class="text-lg sm:text-[28px] font-medium text-[var(--primary-1)] mt-4">Islamic Classes</span>
+                <span class="text-lg sm:text-[28px] font-medium text-[var(--primary-1)] mt-4">{{ $service->title }}</span>
                 <span class="text-xs sm:text-base text-[var(--grey-600)] sm:px-16 mt-4">
-                    Join our community in creating a sacred space for worship,
-                    learning, and unity. Every donation brings us closer to our goal.
+                    {{ Str::limit($service->description, 120) }}
                 </span>
-                <a href="{{ route('masjid.services') }}">
-                    <div class="flex items-center mt-6 justify-center gap-x-[10px] py-3 px-4 rounded-[10px] bg-[var(--primary-1)] cursor-pointer">
+                <a href="{{ route('masjid.services.detail', $service->slug) }}">
+                    <div class="flex items-center mt-6 justify-center gap-x-[10px] py-3 px-4 rounded-[10px] bg-[var(--primary-1)] cursor-pointer hover:bg-[var(--primary-2)] transition-colors">
                         <span class="text-white capitalize font-medium">Read More</span>
-                        <i class="ti ti-book-upload text-white text-2xl"></i>
+                        <i class="ti ti-arrow-right text-white text-2xl"></i>
                     </div>
                 </a>
             </div>
-            <div class="flex flex-col justify-center items-center text-center">
-                <div class="flex justify-center items-center w-[112px] h-[112px] rounded-full bg-[var(--grey-200)]">
-                    <i class="ti ti-heart text-[var(--primary-1)] text-[54px]"></i>
-                </div>
-                <span class="text-lg sm:text-[28px] font-medium text-[var(--primary-1)] mt-4">Nikah</span>
-                <span class="text-xs sm:text-base text-[var(--grey-600)] sm:px-16 mt-4">
-                    Join our community in creating a sacred space for worship,
-                    learning, and unity. Every donation brings us closer to our goal.
-                </span>
-                <a href="{{ route('masjid.services') }}">
-                    <div class="flex items-center mt-6 justify-center gap-x-[10px] py-3 px-4 rounded-[10px] bg-[var(--primary-1)] cursor-pointer">
-                        <span class="text-white capitalize font-medium">Read More</span>
-                        <i class="ti ti-book-upload text-white text-2xl"></i>
-                    </div>
-                </a>
+            @empty
+            <div class="col-span-full py-10 text-center text-gray-500 italic">
+                No services available at the moment.
             </div>
-            <div class="flex flex-col justify-center items-center text-center">
-                <div class="flex justify-center items-center w-[112px] h-[112px] rounded-full bg-[var(--grey-200)]">
-                    <i class="ti ti-bed text-[var(--primary-1)] text-[54px]"></i>
-                </div>
-                <span class="text-lg sm:text-[28px] font-medium text-[var(--primary-1)] mt-4">Janajah</span>
-                <span class="text-xs sm:text-base text-[var(--grey-600)] sm:px-16 mt-4">
-                    Join our community in creating a sacred space for worship,
-                    learning, and unity. Every donation brings us closer to our goal.
-                </span>
-                <a href="{{ route('masjid.services') }}">
-                    <div class="flex items-center mt-6 justify-center gap-x-[10px] py-3 px-4 rounded-[10px] bg-[var(--primary-1)] cursor-pointer">
-                        <span class="text-white capitalize font-medium">Read More</span>
-                        <i class="ti ti-book-upload text-white text-2xl"></i>
-                    </div>
-                </a>
-            </div>
+            @endforelse
         </div>
     </section>
     <!-----gallery-->
