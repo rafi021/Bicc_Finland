@@ -37,14 +37,14 @@
                     @endphp
                     <div class="absolute inset-x-2 bottom-0 h-[8px] bg-[var(--primary-2)] rounded-full transition-all duration-1000 shadow-md" style="width: calc({{ $percentage }}% - 16px)"></div>
                 </div>
-                <div class="flex justify-between items-center w-full mt-4 px-2">
-                    <div class="flex flex-col text-left">
-                        <span class="text-[10px] uppercase font-bold text-gray-400">Raised</span>
-                        <span class="text-sm sm:text-lg font-bold text-[var(--primary-1)]">$ {{ number_format(@$setting->donation_raised, 2) }}</span>
+                <div class="flex justify-between items-center w-full mt-3 px-2">
+                    <div class="text-left">
+                        <span class="text-xs sm:text-base text-black-400">Donation Raised : </span>
+                        <span class="text-sm sm:text-md font-medium text-black-900">$ {{ number_format(@$setting->donation_raised, 2) }}</span>
                     </div>
-                    <div class="flex flex-col text-right">
-                        <span class="text-[10px] uppercase font-bold text-gray-400">Our Goal</span>
-                        <span class="text-sm sm:text-lg font-bold text-[var(--grey-800)]">$ {{ number_format(@$setting->donation_goal, 2) }}</span>
+                    <div class="text-right">
+                        <span class="text-xs sm:text-base text-black-400">Donation Goal : </span>
+                        <span class="text-sm sm:text-md font-medium text-black-900">$ {{ number_format(@$setting->donation_goal, 2) }}</span>
                     </div>
                 </div>
             </div>
@@ -89,13 +89,10 @@
             <div class="col-span-12 lg:col-span-6">
                 <div class="flex flex-col gap-y-[18px] px-[30px] py-[30px] rounded-[20px] bg-[var(--grey-50)] border border-[var(--grey-200)] h-full">
                     <h3 class="capitalize text-lg md:text-[28px] font-medium text-[var(--primary-2)]">
-                        Daily Prayers ({{ now()->format('M d, Y') }})
+                        Prayer Time
                     </h3>
                     <div class="flex flex-col gap-y-[10px] flex-1 justify-center">
-                        <div class="grid grid-cols-2 py-3 border-b border-[#A6E9C2] text-xs sm:text-base font-semibold text-[var(--primary-2)]">
-                            <span>Prayer</span>
-                            <span class="text-right">Time</span>
-                        </div>
+                        
                         @foreach(['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'] as $prayer)
                         <div class="grid grid-cols-2 py-3 border-b border-[#A6E9C2] text-xs sm:text-lg text-[var(--grey-600)]">
                             <span class="capitalize">{{ $prayer }}</span>
@@ -143,13 +140,13 @@
                         <h3 class="text-lg md:text-[32px] text-[var(--primary-2)] font-medium capitalize">
                             Monthly Prayer Times
                         </h3>
-                        <p class="text-sm md:text-xl text-[var(--grey-500)] font-medium capitalize leading-tight">
+                        <p class="text-sm md:text-xl text-[var(--grey-700)] font-medium capitalize leading-tight">
                             Download complete prayer schedule for the month
                         </p>
                         @if(@$setting->monthly_schedule_file)
                         <a href="{{ asset(@$setting->monthly_schedule_file) }}" target="_blank" class="flex items-center justify-center gap-x-[10px] py-3 px-3 rounded-[10px] bg-[var(--primary-1)] cursor-pointer hover:bg-[var(--primary-2)] transition-colors">
-                            <span class="text-white capitalize font-medium">Download PDF/Image</span>
-                            <i class="ti ti-download text-white text-2xl"></i>
+                            <span class="text-white capitalize font-medium">Download PDF</span>
+                            <i class="ti ti-book-upload text-white text-2xl"></i>
                         </a>
                         @else
                         <div class="flex items-center justify-center gap-x-[10px] py-3 px-3 rounded-[10px] bg-gray-300 cursor-not-allowed">

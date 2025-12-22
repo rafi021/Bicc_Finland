@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin @yield('title', 'Dashboard') | {{ @$setting->site_name ?? 'CBG Mosque' }}</title>
+    <title>Admin @yield('title', 'Dashboard') | {{ @$setting->site_name ?? 'BICC FINLAND' }}</title>
     <link rel="icon" type="image/png" href="{{ image(@$setting->favicon, 'favicon.png', '32x32', 'F') }}" />
     @include('admin.partials.styles')
 </head>

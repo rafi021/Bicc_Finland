@@ -14,11 +14,10 @@ class AppServiceProvider extends ServiceProvider
         require_once app_path('helpers.php');
     }
 
-    /**
-     * Bootstrap any application services.
-     */
     public function boot(): void
     {
-        // \Illuminate\Support\Facades\View::share('setting', \App\Models\MosqueSetting::first() ?? new \App\Models\MosqueSetting());
+        // if (!app()->runningInConsole() && \Illuminate\Support\Facades\Schema::hasTable('mosque_settings')) {
+        //     \Illuminate\Support\Facades\View::share('setting', \App\Models\MosqueSetting::first() ?? new \App\Models\MosqueSetting());
+        // }
     }
 }

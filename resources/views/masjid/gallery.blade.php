@@ -2,6 +2,16 @@
 
 @section('title', 'Gallery')
 
+@push('styles')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+<style>
+    /* Hide the Lightbox Close Button */
+    .lb-closeContainer, .lb-close {
+        display: none !important;
+    }
+</style>
+@endpush
+
 @section('content')
 <section>
     <!-----hero section-->
@@ -44,9 +54,11 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     @forelse($galleries as $image)
                         <div class="flex flex-col items-start w-full group">
-                            <div class="w-full max-[360px]:h-[200px] h-[291px] lg:h-[200px] xl:h-[291px] rounded-[16px] overflow-hidden shadow-sm">
-                                <img src="{{ image($image->image, null, '400x291', 'Gallery') }}" alt="{{ $image->title }}" class="w-full h-full object-cover rounded-[16px] transition-transform duration-500 group-hover:scale-105" />
-                            </div>
+                            <a href="{{ image($image->image) }}" data-lightbox="gallery" data-title="{{ $image->title }} - {{ $image->event_name }}" class="w-full h-full">
+                                <div class="w-full max-[360px]:h-[200px] h-[291px] lg:h-[200px] xl:h-[291px] rounded-[16px] overflow-hidden shadow-sm">
+                                    <img src="{{ image($image->image, null, '400x291', 'Gallery') }}" alt="{{ $image->title }}" class="w-full h-full object-cover rounded-[16px] transition-transform duration-500 group-hover:scale-105" />
+                                </div>
+                            </a>
                             <div class="flex flex-col mt-3">
                                 <span class="text-sm sm:text-base text-[var(--grey-600)] font-semibold">{{ $image->title }}</span>
                                 <span class="text-xs text-[var(--primary-2)] font-medium">
@@ -124,3 +136,15 @@
 </section>
 
 @endsection
+
+@push('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+<script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices': true,
+      'albumLabel': "Image %1 of %2"
+    })
+</script>
+@endpush

@@ -132,7 +132,7 @@ class MosqueController extends Controller
     {
         ServiceRequest::create($request->all());
 
-        return redirect()->back()->with('success', 'Thank you for your request! We will contact you soon.');
+        return redirect()->to(url()->previous() . '#service-request')->with('success', 'Thank you for your request! We will contact you soon.');
     }
 
     /**
@@ -152,7 +152,7 @@ class MosqueController extends Controller
             }
         }
         
-        $galleries = $query->latest()->paginate(12);
+        $galleries = $query->latest()->paginate(4);
         
         return view('masjid.gallery', compact('setting', 'categories', 'galleries'));
     }

@@ -12,8 +12,7 @@
                     <img src="{{ image($logoPath, null, '40x40', 'Logo') }}" alt="Logo" class="w-full h-full object-contain p-1">
                 </div>
                 <div>
-                    <h1 class="text-lg font-bold text-white group-hover:text-accent-300 transition-colors tracking-tight leading-none">{{ @$setting->site_name ?? 'CBG Mosque' }}</h1>
-                    <span class="text-[10px] text-primary-300 uppercase font-bold tracking-widest mt-1 block">Management</span>
+                    <h1 class="text-lg font-bold text-white group-hover:text-accent-300 transition-colors tracking-tight leading-none">{{ @$setting->site_name ?? 'BICC FINLAND' }}</h1>
                 </div>
             </a>
         </header>

@@ -28,7 +28,8 @@ class GalleryRequest extends FormRequest
             'category_id' => 'required|exists:gallery_categories,id',
             'title' => 'nullable|string|max:255',
             'event_name' => 'nullable|string|max:255',
-            'image' => $isUpdate ? 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048' : 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => $isUpdate ? 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048' : 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
             'event_time' => 'nullable|string|max:255',
         ];
     }

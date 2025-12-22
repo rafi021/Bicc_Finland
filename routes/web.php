@@ -105,7 +105,6 @@ Route::prefix('mosque')->name('masjid.')->group(function () {
     Route::post('/join-class', [MosqueController::class, 'storeRegistration'])->name('join_class');
     // Community Join
     Route::post('/join-community', [MosqueController::class, 'storeCommunityMember'])->name('join_community'); // keep for backward compatibility
-    Route::post('/join-community', [MosqueController::class, 'storeCommunityMember'])->name('join_community');
     // Donor Notification
     Route::post('/donate', [MosqueController::class, 'storeDonor'])->name('store_donor');
 });

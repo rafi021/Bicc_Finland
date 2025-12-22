@@ -29,18 +29,30 @@ class GalleryController extends Controller
 
     public function store(GalleryRequest $request)
     {
-        $data = $request->validated();
+        $data = $request->except(['image', 'images']);
 
-        if ($request->hasFile('image')) {
+        // Handle multiple images
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $file) {
+                $filename = 'gallery_' . uniqid() . '.' . $file->getClientOriginalExtension();
+                $file->move(public_path('upload'), $filename);
+                
+                $galleryData = $data;
+                $galleryData['image'] = 'upload/' . $filename;
+                Gallery::create($galleryData);
+            }
+        } 
+        // Handle single image (fallback or standard single upload)
+        elseif ($request->hasFile('image')) {
             $file = $request->file('image');
-            $filename = 'gallery_' . time() . '.' . $file->getClientOriginalExtension();
+            $filename = 'gallery_' . uniqid() . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('upload'), $filename);
+            
             $data['image'] = 'upload/' . $filename;
+            Gallery::create($data);
         }
 
-        Gallery::create($data);
-
-        return redirect()->route('admin.galleries.index')->with('success', 'Gallery item added successfully.');
+        return redirect()->route('admin.galleries.index')->with('success', 'Gallery items added successfully.');
     }
 
     public function edit(Gallery $gallery)

@@ -6,7 +6,7 @@
 <div class="grid grid-cols-1 gap-6 mb-6">
     <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
         <h3 class="text-2xl font-semibold text-slate-900 mb-2">Welcome back! 👋</h3>
-        <p class="text-slate-600">Here's what's happening with your mosque community today.</p>
+        <p class="text-slate-600">Here's what's happening with your BICC FINLAND community today.</p>
     </div>
 </div>
 
