@@ -114,7 +114,7 @@ class MosqueController extends Controller
             $setting = new MosqueSetting();
         }
         
-        $services = Service::latest()->get();
+        $services = Service::latest()->take(6)->get();
         return view('masjid.services', compact('services', 'setting'));
     }
 
