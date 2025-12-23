@@ -121,10 +121,10 @@
                         
                         @if(@$setting->jummah_live_link)
                         <div class="relative">
-                            <span class="absolute -top-2 -right-2 flex h-3 w-3">
+                            {{-- <span class="absolute top-5 left-1 flex h-3 w-3">
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                            </span>
+                            </span> --}}
                             <a href="{{ @$setting->jummah_live_link }}" target="_blank" class="flex items-center justify-center gap-x-[10px] py-3 px-3 rounded-[10px] bg-white cursor-pointer hover:bg-gray-100 transition-all shadow-md group">
                                 <span class="text-[var(--primary-1)] capitalize font-bold group-hover:scale-105 transition-transform">Join Live Khutbah</span>
                                 <i class="ti ti-brand-youtube-filled text-red-600 text-2xl group-hover:animate-pulse"></i>
