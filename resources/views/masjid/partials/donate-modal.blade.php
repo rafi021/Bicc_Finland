@@ -8,17 +8,17 @@
             
             <div class="flex flex-wrap gap-3 justify-center items-center">
                 <div id="active-qr-code" onclick="showQrCode()" class="px-6 py-3 rounded-xl cursor-pointer bg-green-600 text-white text-xs sm:text-base text-center font-bold uppercase shadow-lg transition-all hover:scale-105 active:scale-95">
-                    Qr code process
+                    Mobile Banking
                 </div>
                 <div id="active-mobile-banking" onclick="showMoblileBanking()" class="px-6 py-3 rounded-xl cursor-pointer hover:bg-green-50 text-xs sm:text-base text-center text-[var(--grey-500)] font-bold uppercase transition-all border border-gray-200 hover:border-green-600 shadow-sm active:scale-95">
-                    BANK TRANSFER
+                    Bank Transfer
                 </div>
             </div>
 
             <!-- QR Code Container -->
             <div id="qr-code-container" class="flex flex-col items-center animate-in fade-in zoom-in duration-300">
                 <h3 class="text-xl sm:text-2xl text-center text-gray-800 font-bold mb-4">
-                    Scan & Secure Payment
+                    Scan & Donate Us
                 </h3>
                 <div class="w-64 h-64 p-3 bg-white border-4 border-[var(--primary-1)] rounded-3xl shadow-xl flex items-center justify-center relative overflow-hidden group">
                     @php 
@@ -34,18 +34,18 @@
                 </div>
                 <p class="mt-4 text-[var(--grey-500)] text-sm italic font-medium flex items-center gap-2">
                     <i class="ti ti-camera text-[var(--primary-1)]"></i>
-                    Scan using any payment app
+                    Scan to donate via your mobile banking app.
                 </p>
             </div>
 
             <!-- Bank Transfer Container -->
             <div id="mobile-banking-container" class="hidden flex flex-col items-center animate-in fade-in zoom-in duration-300">
                 <h3 class="text-xl sm:text-2xl text-gray-800 text-center font-bold mb-6">
-                    Bank Scan & Pay
+                     Scan & Donate Us via Bank Transfer
                 </h3>
                 
                 <!-- Bank QR -->
-                <div class="w-64 h-64 p-3 bg-white border-4 border-blue-600 rounded-3xl shadow-xl flex items-center justify-center mb-6 relative group overflow-hidden">
+                <div class="w-64 h-64 p-3 bg-white border-4 border-green-600 rounded-3xl shadow-xl flex items-center justify-center mb-6 relative group overflow-hidden">
                     @php 
                         $bankQrPath = @$setting->bank_qr;
                         $hasBankQr = $bankQrPath && file_exists(public_path($bankQrPath));
@@ -53,13 +53,13 @@
                     <img src="{{ image($bankQrPath, 'masjid/images/qr.png', '256x256', 'Bank QR') }}" alt="Bank QR" class="w-full h-full object-contain {{ !$hasBankQr ? 'opacity-30 blur-[1px]' : '' }}" />
                     @if(!$hasBankQr)
                         <div class="absolute inset-0 flex flex-col items-center justify-center bg-white/40">
-                             <span class="text-sm font-black text-blue-400 rotate-[12deg] border-2 border-blue-400 px-2 rounded uppercase">Sample Bank QR</span>
+                             <span class="text-sm font-black text-green-400 rotate-[12deg] border-2 border-green-400 px-2 rounded uppercase">Sample Bank QR</span>
                         </div>
                     @endif
                 </div>
 
                 <div class="w-full flex justify-center mb-6">
-                    <button onclick="toggleBankDetails()" id="toggle-bank-btn" class="px-8 py-3 bg-blue-50 text-blue-700 font-black rounded-full border-2 border-blue-200 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all flex items-center gap-2 shadow-sm active:scale-95">
+                    <button onclick="toggleBankDetails()" id="toggle-bank-btn" class="px-8 py-3 bg-green-50 text-green-700 font-black rounded-full border-2 border-green-200 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all flex items-center gap-2 shadow-sm active:scale-95">
                         <i class="ti ti-building-bank"></i> View Account Details
                     </button>
                 </div>

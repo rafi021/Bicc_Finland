@@ -256,8 +256,8 @@
             @endforelse
         </div>
     </section>
-    <!-----gallery-->
 
+    <!-----gallery-->
     <section id="gallery" class="max-w-[1320px] my-6 md:my-[130px] px-5 xl:px-0 mx-auto overflow-hidden">
         <h3 class="text-xl mb-10 md:text-[32px] text-[var(--primary-2)] font-medium text-center capitalize">
             community gallery
@@ -352,7 +352,7 @@
             </div>
 
             <div onclick="document.getElementById('event-container').classList.add('translate-y-[200%]', 'opacity-0')" 
-                 class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white text-sm sm:text-base flex gap-x-2 items-center font-bold rounded-xl cursor-pointer transition-all active:scale-95">
+                 class="px-4 py-2 bg-red-400 hover:bg-red-500 text-white text-sm sm:text-base flex gap-x-2 items-center font-bold rounded-xl cursor-pointer transition-all active:scale-95">
                 <i class="ti ti-x"></i>
                 <span>Skip</span>
             </div>
